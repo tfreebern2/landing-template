@@ -1,3 +1,24 @@
+.booyah-box {
+	-moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+	-webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+	box-shadow: 1px 1px 2px 0 #d0d0d0;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	padding: 20px;
+}
+
+.card {
+	background-color: #fff;
+	border-radius: .25rem;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+	border: 1px solid #e8e8e8;
+	margin-top: 40px;
+	padding: 0;
+}
+
 .footer {
 	position: absolute;
 	bottom: 0;
