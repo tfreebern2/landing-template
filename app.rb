@@ -1,5 +1,7 @@
 require 'sinatra'
 require 'pony'
+require 'config_env'
+ConfigEnv.init("#{__dir__}/config/env.rb")
 
 get '/' do
   erb :index
