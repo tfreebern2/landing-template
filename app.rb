@@ -5,7 +5,11 @@ get '/' do
   erb :index
 end
 
-post '/' do
+get '/contact.erb' do
+  erb :contact
+end
+
+post '/contact' do
   configure_pony
   name = params[:name]
   sender_email = params[:email]
@@ -14,11 +18,11 @@ post '/' do
   begin
     Pony.mail(
       :from => "#{name}<#{sender_email}>",
-      :to => 'example@gmail.com',
+      :to => 'tfreebern2@gmail.com',
       :subject =>"#{name} has contacted you",
       :body => "#{message}",
     )
-    redirect '/success'
+    redirect '/'
   rescue
     @exception = $!
     erb :boom
@@ -35,7 +39,7 @@ def configure_pony
       :password             => ENV['SENDGRID_PASSWORD'],
       :authentication       => :plain,
       :enable_starttls_auto => true,
-      :domain               => 'heroku.com'
+      :domain               => 'localhost:4567'
     }
   }
 end

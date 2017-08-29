@@ -18,16 +18,35 @@
 
     <div class="container-fluid">
       <div class="col-xs-8 col-xs-offset-2 booyah-box">
-        <h1 class="text-center">Hello Sinatra</h1>
+        <h1 class="text-center">Contact Form</h1>
       </div>
     </div>
 
     <div class="container-fluid">
       <div class="col-xs-8 col-xs-offset-2 booyah-box">
-        <a href="/contact.erb">Contact</a>
+        <form action="/contact" method="post">
+          <div class="col-xs-12">
+            <div class="form-group">
+              <label class="form-control-label" for="name">Your Name:</label>
+              <input type="text" name="name" class="form-control" placeholder="John Smith...">
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <div class="form-group">
+              <label class="form-control-label" for="email">Your email address:</label>
+              <input type="text" name="email" class="form-control" placeholder="email@example.com">
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <div class="form-group">
+              <label class="form-control-label" for="to">Your message:</label>
+              <textarea name="message" class="form-control" rows="10"></textarea><br>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary pull-right" value="Send">Submit</button>
+        </form>
       </div>
     </div>
-
 
     <footer class="footer">
       <div class="container-fluid">
